@@ -9,68 +9,70 @@
 
     body {
       font-family: 'Courier New', monospace;
-      background: #1e1e2e;
-      color: #cdd6f4;
+      background: #f5f5f5;
+      color: #1a1a1a;
       min-height: 100vh;
       padding: 2rem;
     }
 
     h1 {
-      color: #cba6f7;
-      font-size: 1.6rem;
-      margin-bottom: 0.3rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+      color: #1a1a1a;
     }
 
     .subtitle {
-      color: #6c7086;
       font-size: 0.85rem;
+      color: #555;
       margin-bottom: 1.8rem;
     }
 
+    /* ── Controls ── */
     .controls {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
       align-items: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
 
-    .controls label { color: #a6adc8; }
+    .controls label { color: #333; }
 
     input[type=number] {
       width: 64px;
-      padding: 0.4rem 0.6rem;
-      background: #313244;
-      color: #cdd6f4;
-      border: 1px solid #585b70;
-      border-radius: 6px;
+      padding: 0.35rem 0.6rem;
+      background: #fff;
+      color: #1a1a1a;
+      border: 1px solid #bbb;
+      border-radius: 5px;
       font-family: inherit;
       font-size: 1rem;
       text-align: center;
     }
 
     button {
-      padding: 0.4rem 1.4rem;
-      background: #cba6f7;
-      color: #1e1e2e;
+      padding: 0.35rem 1.3rem;
+      background: #1a1a1a;
+      color: #fff;
       border: none;
-      border-radius: 6px;
+      border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
       font-family: inherit;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: background 0.15s;
     }
-    button:hover { background: #b4befe; }
+    button:hover { background: #444; }
 
+    /* ── Summary ── */
     #summary {
-      color: #a6e3a1;
-      font-size: 1rem;
-      margin-bottom: 1.2rem;
-      min-height: 1.4rem;
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 1.1rem;
+      min-height: 1.3rem;
     }
 
-    /* Navigation bar for solutions */
+    /* ── Pagination ── */
     #navBar {
       display: none;
       align-items: center;
@@ -78,75 +80,81 @@
       margin-bottom: 1.2rem;
       flex-wrap: wrap;
     }
-    #navBar span { color: #a6adc8; font-size: 0.9rem; }
     .nav-btn {
       padding: 0.3rem 0.9rem;
-      background: #45475a;
-      color: #cdd6f4;
-      border: none;
+      background: #fff;
+      color: #1a1a1a;
+      border: 1px solid #bbb;
       border-radius: 5px;
       cursor: pointer;
       font-family: inherit;
       font-size: 0.85rem;
       transition: background 0.15s;
     }
-    .nav-btn:hover { background: #585b70; }
+    .nav-btn:hover { background: #eee; }
     .nav-btn:disabled { opacity: 0.35; cursor: default; }
-    #pageInfo { color: #89b4fa; font-size: 0.9rem; min-width: 80px; text-align: center; }
+    #pageInfo {
+      font-size: 0.88rem;
+      color: #555;
+      min-width: 80px;
+      text-align: center;
+    }
 
-    /* Solution block */
+    /* ── Solution block ── */
     .solution-block {
-      background: #313244;
-      border: 1px solid #45475a;
-      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
       padding: 1.2rem 1.5rem;
+      margin-bottom: 1.2rem;
       max-width: 860px;
     }
 
     .solution-title {
-      color: #f38ba8;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: bold;
-      margin-bottom: 0.8rem;
+      color: #1a1a1a;
+      margin-bottom: 0.9rem;
       padding-bottom: 0.5rem;
-      border-bottom: 1px solid #45475a;
+      border-bottom: 1px solid #e0e0e0;
     }
 
+    /* Section labels — only colour used to distinguish the 3 sections */
     .section-label {
-      color: #89b4fa;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+      color: #555;
       margin-bottom: 0.35rem;
     }
 
-    /* (1) 1D Array */
+    /* ── (1) 1D Array ── */
     .array-1d {
-      color: #fab387;
-      background: #1e1e2e;
-      border-radius: 6px;
-      padding: 0.5rem 0.8rem;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 0.45rem 0.8rem;
       margin-bottom: 1rem;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
+      color: #1a1a1a;
       word-break: break-all;
     }
 
-    /* (2) 2D Array */
-    .array-2d-wrap {
-      margin-bottom: 1rem;
-    }
+    /* ── (2) 2D Array ── */
+    .array-2d-wrap { margin-bottom: 1rem; }
     .array-2d {
-      color: #a6e3a1;
-      background: #1e1e2e;
-      border-radius: 6px;
-      padding: 0.5rem 0.8rem;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 0.45rem 0.8rem;
       white-space: pre;
-      font-size: 0.88rem;
+      font-size: 0.87rem;
+      color: #1a1a1a;
       overflow-x: auto;
     }
 
-    /* (3) StringGrid */
+    /* ── (3) StringGrid ── */
     .grid-wrap { margin-bottom: 0.4rem; }
     table.grid {
       border-collapse: collapse;
@@ -157,32 +165,31 @@
       height: 38px;
       text-align: center;
       vertical-align: middle;
-      border: 2px solid #45475a;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: bold;
-      transition: background 0.1s;
+      border: 1px solid #ccc;
     }
-    /* checkerboard light squares */
-    table.grid tr:nth-child(odd) td:nth-child(even),
-    table.grid tr:nth-child(even) td:nth-child(odd) {
-      background: #2a2a3e;
-    }
-    /* checkerboard dark squares */
+    /* Checkerboard: two neutral greys — no extra colours */
     table.grid tr:nth-child(odd) td:nth-child(odd),
     table.grid tr:nth-child(even) td:nth-child(even) {
-      background: #1e1e2e;
+      background: #fff;
     }
+    table.grid tr:nth-child(odd) td:nth-child(even),
+    table.grid tr:nth-child(even) td:nth-child(odd) {
+      background: #efefef;
+    }
+    /* Queen cell: black background + white text — only accent used */
     table.grid td.queen {
-      background: #cba6f7 !important;
-      color: #1e1e2e;
+      background: #1a1a1a !important;
+      color: #fff;
     }
-    table.grid td.empty { color: #45475a; }
+    table.grid td.empty { color: #bbb; }
   </style>
 </head>
 <body>
 
 <h1>n-Queen Problem Solver</h1>
-<p class="subtitle">Place n queens on an n×n board so that no two queens threaten each other.</p>
+<p class="subtitle">Place n queens on an n&times;n board so that no two queens threaten each other.</p>
 
 <div class="controls">
   <label for="nInput">Board size n =</label>
@@ -201,9 +208,7 @@
 <script>
   let n, queens, solutions;
   let currentPage = 0;
-  const PAGE_SIZE = 10; // show 10 solutions per page
-
-  // ── Core algorithm (mirrors the C++ logic) ──
+  const PAGE_SIZE = 10;
 
   function isValid(row, col) {
     for (let i = 0; i < row; i++) {
@@ -214,29 +219,19 @@
   }
 
   function solve(row) {
-    if (row === n) {
-      solutions.push([...queens]);
-      return;
-    }
+    if (row === n) { solutions.push([...queens]); return; }
     for (let col = 0; col < n; col++) {
-      if (isValid(row, col)) {
-        queens[row] = col;
-        solve(row + 1);
-      }
+      if (isValid(row, col)) { queens[row] = col; solve(row + 1); }
     }
   }
-
-  // ── Render one solution block ──
 
   function renderSolution(sol, globalIdx) {
     const div = document.createElement('div');
     div.className = 'solution-block';
-    div.style.marginBottom = '1.2rem';
 
-    // Title
     const title = document.createElement('div');
     title.className = 'solution-title';
-    title.textContent = `Solution ${globalIdx + 1}`;
+    title.textContent = 'Solution ' + (globalIdx + 1);
     div.appendChild(title);
 
     // (1) 1D Array
@@ -244,11 +239,9 @@
     lbl1.className = 'section-label';
     lbl1.textContent = '(1) 1D Array Representation';
     div.appendChild(lbl1);
-
     const arr1d = document.createElement('div');
     arr1d.className = 'array-1d';
-    const s1d = sol.map((v, i) => `s[${i}]=${v}`).join(',  ');
-    arr1d.textContent = `s[] = { ${s1d} }`;
+    arr1d.textContent = 's[] = { ' + sol.map((v, i) => 's[' + i + ']=' + v).join(',  ') + ' }';
     div.appendChild(arr1d);
 
     // (2) 2D Array
@@ -256,7 +249,6 @@
     lbl2.className = 'section-label';
     lbl2.textContent = '(2) 2D Array Representation';
     div.appendChild(lbl2);
-
     const wrap2d = document.createElement('div');
     wrap2d.className = 'array-2d-wrap';
     const arr2d = document.createElement('div');
@@ -264,7 +256,7 @@
     let s2d = '';
     for (let i = 0; i < n; i++) {
       const row = Array.from({ length: n }, (_, j) => sol[i] === j ? 'Q' : '.');
-      s2d += `q[${i}] = [ ${row.join(', ')} ]\n`;
+      s2d += 'q[' + i + '] = [ ' + row.join(', ') + ' ]\n';
     }
     arr2d.textContent = s2d.trimEnd();
     wrap2d.appendChild(arr2d);
@@ -275,7 +267,6 @@
     lbl3.className = 'section-label';
     lbl3.textContent = '(3) 2D StringGrid';
     div.appendChild(lbl3);
-
     const gWrap = document.createElement('div');
     gWrap.className = 'grid-wrap';
     const table = document.createElement('table');
@@ -284,24 +275,16 @@
       const tr = document.createElement('tr');
       for (let j = 0; j < n; j++) {
         const td = document.createElement('td');
-        if (sol[i] === j) {
-          td.className = 'queen';
-          td.textContent = 'Q';
-        } else {
-          td.className = 'empty';
-          td.textContent = '.';
-        }
+        if (sol[i] === j) { td.className = 'queen'; td.textContent = 'Q'; }
+        else { td.className = 'empty'; td.textContent = '.'; }
         tr.appendChild(td);
       }
       table.appendChild(tr);
     }
     gWrap.appendChild(table);
     div.appendChild(gWrap);
-
     return div;
   }
-
-  // ── Pagination ──
 
   function showPage(page) {
     const output = document.getElementById('output');
@@ -309,23 +292,16 @@
     const totalPages = Math.ceil(solutions.length / PAGE_SIZE);
     if (page < 0 || page >= totalPages) return;
     currentPage = page;
-
     output.innerHTML = '';
     const start = page * PAGE_SIZE;
     const end = Math.min(start + PAGE_SIZE, solutions.length);
-    for (let i = start; i < end; i++) {
-      output.appendChild(renderSolution(solutions[i], i));
-    }
-
-    document.getElementById('pageInfo').textContent =
-      `Page ${page + 1} / ${totalPages}`;
+    for (let i = start; i < end; i++) output.appendChild(renderSolution(solutions[i], i));
+    document.getElementById('pageInfo').textContent = 'Page ' + (page + 1) + ' / ' + totalPages;
     document.getElementById('btnPrev').disabled = page === 0;
     document.getElementById('btnNext').disabled = page === totalPages - 1;
     navBar.style.display = totalPages > 1 ? 'flex' : 'none';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
-  // ── Entry point ──
 
   function runSolver() {
     n = parseInt(document.getElementById('nInput').value);
@@ -333,19 +309,14 @@
     document.getElementById('output').innerHTML = '';
     document.getElementById('navBar').style.display = 'none';
     summary.textContent = '';
-
     if (isNaN(n) || n <= 0 || n > 12) {
       summary.textContent = 'Please enter a valid n between 1 and 12.';
       return;
     }
-
     queens = new Array(n).fill(-1);
     solutions = [];
     solve(0);
-
-    summary.textContent =
-      `Total: ${solutions.length} solution${solutions.length !== 1 ? 's' : ''} to the ${n}-Queen problem.`;
-
+    summary.textContent = 'Total: ' + solutions.length + ' solution' + (solutions.length !== 1 ? 's' : '') + ' to the ' + n + '-Queen problem.';
     currentPage = 0;
     showPage(0);
   }
