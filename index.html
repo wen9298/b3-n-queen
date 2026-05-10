@@ -27,7 +27,6 @@
       margin-bottom: 1.8rem;
     }
 
-    /* ── Controls ── */
     .controls {
       display: flex;
       flex-wrap: wrap;
@@ -64,7 +63,6 @@
     }
     button:hover { background: #444; }
 
-    /* ── Summary ── */
     #summary {
       font-size: 0.95rem;
       color: #333;
@@ -72,7 +70,6 @@
       min-height: 1.3rem;
     }
 
-    /* ── Pagination ── */
     #navBar {
       display: none;
       align-items: center;
@@ -100,7 +97,6 @@
       text-align: center;
     }
 
-    /* ── Solution block ── */
     .solution-block {
       background: #fff;
       border: 1px solid #ddd;
@@ -119,17 +115,13 @@
       border-bottom: 1px solid #e0e0e0;
     }
 
-    /* Section labels — only colour used to distinguish the 3 sections */
     .section-label {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
       color: #555;
       margin-bottom: 0.35rem;
     }
 
-    /* ── (1) 1D Array ── */
     .array-1d {
       background: #f5f5f5;
       border: 1px solid #e0e0e0;
@@ -141,7 +133,6 @@
       word-break: break-all;
     }
 
-    /* ── (2) 2D Array ── */
     .array-2d-wrap { margin-bottom: 1rem; }
     .array-2d {
       background: #f5f5f5;
@@ -154,7 +145,6 @@
       overflow-x: auto;
     }
 
-    /* ── (3) StringGrid ── */
     .grid-wrap { margin-bottom: 0.4rem; }
     table.grid {
       border-collapse: collapse;
@@ -169,7 +159,6 @@
       font-weight: bold;
       border: 1px solid #ccc;
     }
-    /* Checkerboard: two neutral greys — no extra colours */
     table.grid tr:nth-child(odd) td:nth-child(odd),
     table.grid tr:nth-child(even) td:nth-child(even) {
       background: #fff;
@@ -178,7 +167,6 @@
     table.grid tr:nth-child(even) td:nth-child(odd) {
       background: #efefef;
     }
-    /* Queen cell: black background + white text — only accent used */
     table.grid td.queen {
       background: #1a1a1a !important;
       color: #fff;
@@ -234,7 +222,6 @@
     title.textContent = 'Solution ' + (globalIdx + 1);
     div.appendChild(title);
 
-    // (1) 1D Array
     const lbl1 = document.createElement('div');
     lbl1.className = 'section-label';
     lbl1.textContent = '(1) 1D Array Representation';
@@ -244,7 +231,6 @@
     arr1d.textContent = 's[] = { ' + sol.map((v, i) => 's[' + i + ']=' + v).join(',  ') + ' }';
     div.appendChild(arr1d);
 
-    // (2) 2D Array
     const lbl2 = document.createElement('div');
     lbl2.className = 'section-label';
     lbl2.textContent = '(2) 2D Array Representation';
@@ -262,7 +248,6 @@
     wrap2d.appendChild(arr2d);
     div.appendChild(wrap2d);
 
-    // (3) StringGrid
     const lbl3 = document.createElement('div');
     lbl3.className = 'section-label';
     lbl3.textContent = '(3) 2D StringGrid';
